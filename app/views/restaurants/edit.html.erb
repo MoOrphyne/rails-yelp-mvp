@@ -1,0 +1,18 @@
+  <h1>Edit Restaurant</h1>
+  <%= form_for(@restaurant) do |t| %>
+    <div class="form-group">
+      <%= t.label :name %>
+      <%= t.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= t.label :address %>
+      <%= t.text_field :address, class: 'form-control' %>
+    </div>
+
+    <%= t.submit class: 'btn btn-primary' %>
+  <% end %>
+  <div>
+    <p></p>
+    <p><%= link_to "Back to List", tasks_path(@tasks) %></p>
+  </div>

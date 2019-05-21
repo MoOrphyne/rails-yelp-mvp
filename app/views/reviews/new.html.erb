@@ -1,0 +1,12 @@
+  <h1>New Review</h1>
+  <%= form_for(@review) do |t| %>
+    <div class="form-group">
+      <%= t.label :content %>
+      <%= t.text_field :content, class: 'form-control' %>
+    </div>
+    <%= t.submit "add review" class: 'btn btn-primary' %>
+  <% end %>
+  <div>
+    <p></p>
+    <p><%= link_to "Back to List", tasks_path(@tasks) %></p>
+  </div>
